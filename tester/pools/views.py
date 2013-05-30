@@ -17,7 +17,7 @@ def two(request):
          return HttpResponse("No data was entered. Please enter data to continue.")
      #src = open('C:\Python\Scripts\tester\pools\two.html','r')
      list= zip(sites,measure)   
-     t= Template("<div> Results: </div> <ol>{% for item in list %}    <li>{{ item.0 }} - {{ item.1 }}</li>{% endfor %}</ol>")
+     t= Template("<center><div> TextLock<div><div> Results: </div> <ol>{% for item in list %}    <li>{{ item.0 }} - {{ item.1 }}</li>{% endfor %}</ol></center>")
      c= Context({'list': list},{'text': data})
      res= t.render(c)
      return HttpResponse(res)
